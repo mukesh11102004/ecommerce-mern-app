@@ -1,0 +1,314 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  color: #222;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 8%;
+  background: #1f2937;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.navbar .logo {
+  margin-left: 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.page {
+  width: min(1100px, 90%);
+  margin: 35px auto;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.product-card img,
+.no-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #e5e7eb;
+}
+
+.no-image {
+  display: grid;
+  place-items: center;
+}
+
+.product-card h2 {
+  margin-bottom: 8px;
+  font-size: 19px;
+}
+
+.product-card p {
+  flex-grow: 1;
+  color: #555;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+.message {
+  padding: 40px;
+  text-align: center;
+}
+
+.error {
+  color: #c62828;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.product-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 24px;
+  background: white;
+  border-radius: 10px;
+}
+
+.product-detail img,
+.product-detail .no-image {
+  width: 100%;
+  min-height: 320px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-detail h1 {
+  margin-top: 0;
+}
+
+.product-detail p {
+  line-height: 1.6;
+  color: #555;
+}
+
+.product-detail button {
+  border: 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .product-detail {
+    grid-template-columns: 1fr;
+  }
+}
+
+.welcome {
+  margin-left: 20px;
+  color: white;
+}
+
+.logout-button {
+  margin-left: 15px;
+  border: 0;
+  border-radius: 5px;
+  padding: 8px 12px;
+  background: #ef4444;
+  color: white;
+  cursor: pointer;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: min(420px, 100%);
+  margin: 40px auto;
+  padding: 28px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.auth-form input {
+  padding: 11px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.auth-form button {
+  border: 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cart-list {
+  display: grid;
+  gap: 16px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px;
+  background: white;
+  border-radius: 10px;
+}
+
+.cart-item img,
+.cart-item .no-image {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-item-info {
+  flex-grow: 1;
+}
+
+.cart-item-info h2 {
+  margin: 0 0 8px;
+}
+
+.cart-item input {
+  width: 60px;
+  padding: 6px;
+}
+
+.remove-button {
+  display: block;
+  margin-top: 12px;
+  border: 0;
+  background: #ef4444;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .cart-item {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .cart-total {
+    display: block;
+  }
+
+  .cart-total .button {
+    display: block;
+    margin-top: 15px;
+  }
+}
+
+.checkout-card {
+  margin: 20px 0;
+  padding: 24px;
+  background: white;
+  border-radius: 10px;
+}
+
+.address-list {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.address-option {
+  display: flex;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.address-option input {
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
+.secondary-button {
+  border: 1px solid #2563eb;
+  border-radius: 6px;
+  padding: 10px 14px;
+  background: white;
+  color: #2563eb;
+  cursor: pointer;
+}
+
+.address-form {
+  display: grid;
+  gap: 12px;
+}
+
+.address-form input {
+  padding: 11px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.address-form .button {
+  border: 0;
+  cursor: pointer;
+}
+
+.success {
+  color: #15803d;
+}
+
+.login-link {
+  text-align: center;
+  color: #2563eb;
+  text-decoration: none;
+}
